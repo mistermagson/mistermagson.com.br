@@ -1,10 +1,29 @@
-import Layout from "../components/Layout";
-import Footer from "../components/Footer";
+import {server} from "../config";
+import ArticleList from "../components/ArticleList";
 
-export default function Home() {
+export default function Home({articles}) {
     return(
         <>
-            <Layout>main</Layout>
+            <ArticleList articles={articles}/>
         </>
     )
 }
+
+export const getStaticProps = async () =>{
+
+    const articles = await fetch(`${server}/api/articles`).then(post => post.json())
+
+    return {
+        props: {articles}
+    }
+}
+
+
+/*
+export const getStaticProps = async () =>{
+    const articles = await fetch('http://jsonplaceholder.typicode.com/posts?_limit=6').then(post => post.json())
+
+    return {
+        props: {articles}
+    }
+}*/
