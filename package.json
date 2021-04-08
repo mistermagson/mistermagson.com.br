@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "yarn install && next build && next start",
-    "dev": "next dev"
+    "start": "yarn install && next start",
+    "dev": "next dev",
+    "postinstall": "next build "
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
