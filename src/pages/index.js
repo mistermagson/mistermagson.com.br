@@ -2,16 +2,14 @@ import {server} from "../config";
 import ArticleList from "../components/ArticleList";
 
 export default function Home({articles}) {
-    return(
+    return (
         <>
             <ArticleList articles={articles}/>
         </>
     )
 }
-
-export const getStaticProps = async () =>{
-
-    const articles = await fetch(`${server}/api/articles`).then(post => post.json())
+export const getStaticProps = async () => {
+    const articles = await fetch(`${server}/api/articles`).then((article) => article.json())
 
     return {
         props: {articles}

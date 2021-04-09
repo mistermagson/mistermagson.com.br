@@ -1,14 +1,13 @@
 import Link from "next/link";
 import {server} from "../../../config";
 
-
 const article = ({article}) =>{
    /* const router = useRouter()
     const {id} = router.query*/
-    console.log(article)
+    //console.log(article)
     return (
         <>
-            <h1>{article.id}</h1>
+            <h1>{article.title}</h1>
             <p>{article.body}</p>
             <Link href='/'>Voltar</Link>
         </>
