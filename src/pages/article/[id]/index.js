@@ -13,7 +13,7 @@ const article = ({article}) =>{
         </>
     );
 }
-export const getStaticProps = async (context) =>{
+/*export const getStaticProps = async (context) =>{
     const article = await fetch(`${server}/api/articles/${context.params.id}`).then(article => article.json())
 
     return{
@@ -30,9 +30,9 @@ export const getStaticPaths = async () =>  {
         paths,
         fallback: false
     }
-}
+}*/
 
-/*export const getStaticProps = async (context) =>{
+export const getStaticProps = async (context) =>{
     const article = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`).then(article => article.json())
 
     return{
@@ -49,6 +49,6 @@ export const getStaticPaths = async () =>  {
         paths,
         fallback: false
     }
-}*/
+}
 
 export default article;
