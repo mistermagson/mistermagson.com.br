@@ -1,10 +1,9 @@
-import {server} from "../config";
-import ArticleList from "../components/ArticleList";
+import Perfil from "../components/Perfil";
 
-export default function Home({articles}) {
+export default function Home() {
     return (
         <>
-            <ArticleList articles={articles}/>
+            <Perfil />
         </>
     )
 }
@@ -16,11 +15,21 @@ export default function Home({articles}) {
     }
 }*/
 
+/*
 
 export const getStaticProps = async () =>{
     const articles = await fetch('http://jsonplaceholder.typicode.com/posts?_limit=6').then(post => post.json())
 
     return {
         props: {articles}
+    }
+}*/
+
+export const getServerSideProps = async () => {
+
+    const articles = await fetch(`${server}/api/articles`).then(article => article.json())
+    // console.log('server: ',server)
+    return {
+        props: { articles }
     }
 }

@@ -1,12 +1,12 @@
 import Head from "next/head";
 
-const Header = () =>{
-    return(
-        <>
-            <Head>
-                <title>Mister Magson -</title>
-            </Head>
-        </>
+const Header = () => {
+    return (
+
+        <Head>
+            <title>Mister Magson -</title>
+        </Head>
+
     )
 };
 

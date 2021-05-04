@@ -1,14 +1,12 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Layout from "../components/Layout";
+import styles from "../styles/globals.scss";
 
+import Layout from "../components/Layout";
 
 const App = ({ Component, pageProps }) => {
   return (
-
-<Layout>
-          <Component {...pageProps} />
-</Layout>
-
+    <Layout className={styles.content}>
+      <Component {...pageProps} />
+    </Layout>
   )
 }
 

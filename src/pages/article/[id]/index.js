@@ -4,7 +4,7 @@ import {server} from "../../../config";
 const article = ({article}) =>{
    /* const router = useRouter()
     const {id} = router.query*/
-    //console.log(article)
+
     return (
         <>
             <h1>{article.title}</h1>
@@ -13,6 +13,16 @@ const article = ({article}) =>{
         </>
     );
 }
+export const getServerSideProps = async  (context) =>{
+
+    const article = await fetch(`${server}/api/articles/${context.params.id}`).then(article => article.json())
+
+    return{
+        props:{article}
+    }
+}
+
+
 /*export const getStaticProps = async (context) =>{
     const article = await fetch(`${server}/api/articles/${context.params.id}`).then(article => article.json())
 
@@ -32,7 +42,7 @@ export const getStaticPaths = async () =>  {
     }
 }*/
 
-export const getStaticProps = async (context) =>{
+/*export const getStaticProps = async (context) =>{
     const article = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`).then(article => article.json())
 
     return{
@@ -49,6 +59,6 @@ export const getStaticPaths = async () =>  {
         paths,
         fallback: false
     }
-}
+}*/
 
 export default article;
