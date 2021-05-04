@@ -7,7 +7,6 @@ const Layout = ({ children }) => {
     let date = new Date(Date.now());
     let ano = date.getFullYear();
 
-    console.log(ano);
     return (
         <div>
             <Meta />
