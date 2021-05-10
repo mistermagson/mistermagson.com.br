@@ -12,7 +12,7 @@ const Perfil = () => {
         <Link href="https://linkedin/in/mistermagson" >
           <a > <img src="../images/linkedin48.png" alt="linkedin" /></a>
         </Link>
-        <Link href="https://github/mistermagson" >
+        <Link href="https://github.com/mistermagson" >
           <a> <img src="../images/github48.png" alt="github" /></a>
         </Link>
       </span>
