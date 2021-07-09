@@ -8,9 +8,13 @@
     "postinstall": "next build"
   },
   "dependencies": {
-    "next": "10.0.7",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "sass": "^1.32.12"
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sass": "latest"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1"
   }
 }

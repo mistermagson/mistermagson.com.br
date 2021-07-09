@@ -1,24 +1,28 @@
-import styles from "../styles/perfil.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 const Perfil = () => {
-  return (
-    <div className={styles.perfilContainer} >
-      <img className={styles.fotoPerfil} src="../images/perfil.jpg" alt="foto-magson" />
-      <span className={styles.block}>
-        <Link href="https://instagram.com/mistermagson" >
-          <a> <img src="../images/instagram48.png" alt="instagram" /></a>
+    const perfil = 196
+    const social = 48
+    return (
+        <div className="perfilContainer">
+            <Image
+                className="fotoPerfil"
+                src="/images/perfil.jpg" alt="foto-magson" width={perfil} height={perfil}/>
+            <span className="block">
+        <Link href="https://instagram.com/mistermagson">
+          <a> <Image src='/images/instagram48.png' alt="instagram" width={social} height={social}/></a>
         </Link>
-        <Link href="https://linkedin.com/in/mistermagson" >
-          <a > <img src="../images/linkedin48.png" alt="linkedin" /></a>
+        <Link href='https://linkedin.com/in/mistermagson'>
+          <a> <Image src='/images/linkedin48.png' alt="linkedin" width={social} height={social}/></a>
         </Link>
-        <Link href="https://github.com/mistermagson" >
-          <a> <img src="../images/github48.png" alt="github" /></a>
+        <Link href='https://github.com/mistermagson'>
+          <a> <Image src='/images/github48.png' alt="github" width={social} height={social}/></a>
         </Link>
       </span>
-    </div>
+        </div>
 
-  )
+    )
 };
 
 export default Perfil;
