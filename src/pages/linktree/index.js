@@ -27,7 +27,7 @@ export default function Links() {
         <>
             <div className='linktree'>
                 {data.map((item) => (
-                   <a href={item.url} className='linktree__item'>{item.title}</a>
+                   <a href={item.url} className='linktree__item' key={item.id}>{item.title}</a>
                 ))}
             </div>
         </>
