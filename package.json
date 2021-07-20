@@ -11,7 +11,8 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "sass": "latest"
+    "sass": "latest",
+    "swr": "0.1.18"
   },
   "devDependencies": {
     "eslint": "^7.30.0",

@@ -8,9 +8,9 @@ const Layout = ({ children }) => {
     let ano = date.getFullYear();
 
     return (
-        <div>
+        <>
             <Meta />
-            <Nav />
+
 
             {children}
 
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
             </Footer>
 
-        </div>
+        </>
 
     )
 };

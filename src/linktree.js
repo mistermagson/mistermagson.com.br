@@ -20,7 +20,7 @@ export const links = [
     {
         id: '4',
         title: 'Canal da Helena',
-        url: 'https://youtu.be/EwDKQml-EYk',
+        url: 'https://www.youtube.com/channel/UCH36QtmEStk-JllcYZbSjsg',
         order: '4'
     }
 ]
