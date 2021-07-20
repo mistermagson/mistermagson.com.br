@@ -25,7 +25,6 @@ export default function Links() {
 
     return (
         <>
-            <Perfil/>
             <div className='linktree'>
                 {data.map((item) => (
                    <a href={item.url} className='linktree__item'>{item.title}</a>
